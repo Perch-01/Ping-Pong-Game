@@ -30,13 +30,13 @@ class Ball(Turtle):
         if self.direction_horizontal == 'right' and \
             (WIDTH/2) - new_x <= 50 and\
                 self.distance(self.paddle_right) < 60:
-            self.game_speed -= 0.01
+            self.game_speed *= 0.9
             self.direction_horizontal = 'left'
             new_x = self.xcor()-10
         if self.direction_horizontal == 'left' and \
             (WIDTH/2) - abs(new_x) <= 50 and\
                 self.distance(self.paddle_left) < 60:
-            self.game_speed -= 0.01
+            self.game_speed *= 0.9
             self.direction_horizontal = 'right'
             new_x = self.xcor()+10
 
